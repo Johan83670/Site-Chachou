@@ -5,6 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nos produits - T SHIRT</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS pour la rotation de l'image */
+        .produit {
+            width: 300px;
+            text-align: center;
+            margin: 20px;
+            display: inline-block;
+            position: relative;
+        }
+
+        .produit img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            transition: transform 1s ease-in-out;
+        }
+
+        .produit:hover img {
+            transform: rotate(360deg); /* Rotation à 360° */
+        }
+
+        .produit .description {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -20,16 +46,25 @@
 
     <section class="produits">
         <h2>Nos produits</h2>
+        
         <div class="produit">
-            <h3>Il est trop beau</h3>
-            <p>Il est genial</p>
-            <p><strong>Prix : 200€</strong></p>
+            <img src="image_site/st2020_whi.jpg" alt="T-shirt 1">
+            <div class="description">
+                <h3>Il est trop beau</h3>
+                <p>Il est génial</p>
+                <p><strong>Prix : 200€</strong></p>
+            </div>
         </div>
+
         <div class="produit">
-            <h3>Il est fou</h3>
-            <p>TU vas kiffer 100%</p>
-            <p><strong>Prix : 150€</strong></p>
+            <img src="image_site/693770626664_TShirtIconWhite_Back.jpg" alt="T-shirt 2">
+            <div class="description">
+                <h3>Il est fou</h3>
+                <p>TU vas kiffer 100%</p>
+                <p><strong>Prix : 150€</strong></p>
+            </div>
         </div>
+
     </section>
 
     <footer>
