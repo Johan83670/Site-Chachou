@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous - Automatisation de maisons</title>
+    <link rel="stylesheet" href="style.css"> <!-- Assurez-vous que style.css existe et est dans le bon répertoire -->
+</head>
+<body>
+    <header>
+        <h1>ROSA MARIA</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="produits.html">Produits</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact">
+        <h2>Contactez-nous</h2>
+        <form id="contactForm">
+            <!-- Formulaire de contact avec des champs requis -->
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="subject">Sujet :</label>
+            <input type="text" id="subject" name="subject" required><br><br>
+
+            <label for="message">Message :</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+            <button type="submit">Envoyer</button>
+        </form>
+
+        <!-- Message de confirmation qui sera affiché après envoi réussi -->
+        <div id="confirmationMessage" style="display:none;"></div> 
+    </section>
+
+    <footer>
+        <p>&copy; Chachou 2025</p>
+    </footer>
+
+    <!-- Lien vers le fichier JavaScript externe -->
+    <script src="contact.js"></script> <!-- Assurez-vous que contact.js existe dans le bon répertoire -->
+</body>
+</html>

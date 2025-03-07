@@ -1,0 +1,239 @@
+/* Mise en forme générale */
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+/* Header */
+header {
+    background-color: #de9d2c;
+    color: #000000;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 48px; /* Agrandit le titre */
+    color: #fff; /* Texte clair */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Ombre du texte */
+    font-family: 'Arial', sans-serif; /* Police plus moderne */
+}
+
+/* Style de la barre de navigation */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    background-color: #e2a635; /* Vert */
+    padding: 12px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #977936; /* Changement de couleur */
+    transform: scale(1.1); /* Agrandissement au survol */
+}
+
+/* Section Accueil avec image de fond */
+#accueil {
+    background-color:aliceblue;
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+    color: rgb(39, 49, 30);
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+#accueil .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Fond sombre */
+    z-index: -1;
+}
+
+#accueil h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: white; /* Texte en blanc */
+}
+
+#accueil p {
+    font-size: 20px;
+    color: white; /* Texte en blanc */
+}
+
+/* Section Produits avec images dynamiques */
+
+#produits {
+    background-color:aliceblue;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    padding: 80px 0;
+}
+
+#produits .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Fond sombre */
+    z-index: -1;
+}
+
+#produits .image-container {
+    position: relative;
+    width: 400px;
+    height: 800px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+#produits .image-container img {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, left 0.3s ease;
+}
+
+#produits .image-container:hover img {
+    transform: scale(1.2); /* Agrandissement de l'image */
+    left: 0; /* Déplacement de l'image */
+}
+
+#produits .text {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    transform: translateY(-50%);
+}
+
+/* Section Contact avec image de fond */
+#contact {
+    background-color:aliceblue;
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+#contact .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Fond sombre */
+    z-index: -1;
+}
+
+#contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 20px;
+}
+
+/* Section Contact Form */
+.contact {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact label {
+    margin: 10px 0 5px;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.contact textarea {
+    resize: vertical;
+}
+
+.contact button {
+    background-color: #977936;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact button:hover {
+    background-color: #977936;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    width: 100%;
+}
+
+/* Défilement fluide */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Ajouter du padding aux sections pour un meilleur espacement */
+section {
+    padding: 60px 20px;
+    margin: 20px 0;
+}
