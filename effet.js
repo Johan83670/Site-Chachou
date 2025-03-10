@@ -17,29 +17,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 link.classList.add("active");
             }
         });
-    });
 
-    if (window.innerWidth <= 768) {  // Appliquer l'effet uniquement sur mobile
-        const productImages = document.querySelectorAll("#produits .image-container");
+        // Ajout du code pour l'effet sur les images
+        if (window.innerWidth <= 768) {  // Appliquer l'effet uniquement sur mobile
+            const productImages = document.querySelectorAll("#produits .image-container");
 
-        window.addEventListener("scroll", () => {
             productImages.forEach((image) => {
                 const rect = image.getBoundingClientRect();
-                // Si l'image est dans la fenêtre de visualisation, on applique la classe visible
+
+                // Vérifier si l'image est dans la fenêtre de visualisation
                 if (rect.top < window.innerHeight && rect.bottom > 0) {
                     image.classList.add("visible");
                 } else {
                     image.classList.remove("visible");
                 }
             });
-        });
-
-        // Ajouter la classe visible aux images déjà dans la fenêtre de visualisation au chargement
-        productImages.forEach((image) => {
-            const rect = image.getBoundingClientRect();
-            if (rect.top < window.innerHeight && rect.bottom > 0) {
-                image.classList.add("visible");
-            }
-        });
-    }
+        }
+    });
 });
