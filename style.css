@@ -2,7 +2,7 @@
     /* Réduction de la taille des boutons */
     nav ul li a {
         font-size: 14px; /* Texte plus petit */
-        padding: 8px 12px; /* Réduction de la taille */
+        padding: 6px 10px; /* Réduction de la taille */
         border-radius: 3px;
     }
 
@@ -12,17 +12,18 @@
     }
 
     header h1 {
-        font-size: 40px; /* Titre plus lisible sur mobile */
+        font-size: 30px; /* Titre plus lisible sur mobile */
     }
 
     /* Centrage du menu */
     nav ul {
-        flex-direction: column;
-        align-items: center;
+        display: flex;
+        justify-content: center; /* Centrer horizontalement */
+        flex-wrap: wrap; /* Permettre le retour à la ligne si besoin */
     }
 
     nav ul li {
-        display: block;
+        display: inline-block;
         margin-bottom: 5px;
     }
 
@@ -39,7 +40,7 @@
     }
 
     #produits .image-container {
-        width: 100%;
+        width: 90%;
         max-width: 250px; /* Taille réduite */
         height: auto;
     }
@@ -51,7 +52,7 @@
     /* Ajustement du formulaire de contact */
     .contact {
         width: 90%;
-        padding: 20px;
+        padding: 15px;
     }
 
     .contact button {
