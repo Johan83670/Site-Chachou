@@ -1,10 +1,10 @@
 @media screen and (max-width: 768px) {
     /* Réduction de la taille des boutons */
     nav ul li a {
-        font-size: 14px; /* Texte plus petit */
-        padding: 6px 10px; /* Réduction de la taille */
-        border-radius: 3px;
-        white-space: nowrap; /* Empêche les boutons de se casser en plusieurs lignes */
+        font-size: 12px; /* Texte plus petit */
+        padding: 4px 8px; /* Boutons plus petits */
+        border-radius: 2px;
+        white-space: nowrap; /* Empêche la coupure en plusieurs lignes */
     }
 
     /* Ajustement du header */
@@ -20,13 +20,13 @@
     nav ul {
         display: flex;
         justify-content: center; /* Centrer horizontalement */
-        gap: 10px; /* Espacement entre les boutons */
+        gap: 5px; /* Espacement entre les boutons */
         flex-wrap: nowrap; /* Empêche le retour à la ligne */
     }
 
     nav ul li {
         display: inline-block;
-        margin-bottom: 5px;
+        margin: 0;
     }
 
     /* Ajustement des sections */
