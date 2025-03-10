@@ -18,4 +18,23 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+
+    // 💡 Ajout de l'effet de scroll sur les produits SEULEMENT sur mobile
+    if (window.innerWidth < 768) {
+        const products = document.querySelectorAll(".product");
+
+        function checkVisibility() {
+            products.forEach((product) => {
+                const rect = product.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100 && rect.bottom > 0) {
+                    product.classList.add("visible");
+                }
+            });
+        }
+
+        // On écoute l'événement de scroll uniquement sur mobile
+        window.addEventListener("scroll", checkVisibility);
+        checkVisibility(); // Vérifie au chargement de la page
+    }
 });
+

@@ -66,6 +66,11 @@
     body, html {
         overflow-x: hidden;
     }
+
+    .product {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
 }
 
 
