@@ -1,3 +1,12 @@
+/* Styles généraux pour les ordinateurs de bureau et les grands écrans */
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+/* Styles spécifiques pour les téléphones (écrans plus petits) */
 @media screen and (max-width: 768px) {
     /* Réduction de la taille des boutons */
     nav ul li a {
@@ -39,21 +48,22 @@
         flex-direction: column;
         align-items: center;
         padding: 20px;
-        text-align: center; /* Centrer le texte des produits */
-        display: block; /* Forcer l'affichage en bloc pour plus de flexibilité */
+        text-align: center;
+        display: block;
     }
+
     #produits .image-container {
-        position: relative; /* Nécessaire pour la position absolue du texte */
+        position: relative;
     }
     
     #produits .image-container img {
-        opacity: 1; /* L'image est visible par défaut */
-        transition: opacity 1s ease, transform 1s ease; /* Effet de transition sur l'image */
+        opacity: 1;
+        transition: opacity 1s ease, transform 1s ease;
     }
     
     #produits .image-container:hover img {
-        opacity: 0; /* L'image devient invisible lorsqu'on survole */
-        transform: scale(0.8); /* L'image se réduit */
+        opacity: 0;
+        transform: scale(0.8);
     }
     
     #produits .text {
@@ -65,11 +75,10 @@
         font-size: 40px;
         font-weight: bold;
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
-        opacity: 1; /* Le texte reste visible */
-        visibility: visible; /* Assure que le texte est toujours visible */
+        opacity: 1;
+        visibility: visible;
     }
-    
-    /* Ajustement du formulaire de contact */
+
     .contact {
         width: 90%;
         padding: 15px;
@@ -80,23 +89,10 @@
         padding: 10px;
     }
 
-    /* Empêche tout débordement horizontal */
     body, html {
         overflow-x: hidden;
     }
 }
-
-
-
-
-/* Mise en forme générale */
-body {
-    font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-}
-
 /* Header */
 header {
     background: linear-gradient(to right, #f7d084, #ff9f40); /* Dégradé de couleur plage-soleil */
