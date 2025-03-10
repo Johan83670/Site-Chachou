@@ -18,20 +18,17 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        // Ajout du code pour l'effet sur les images
-        if (window.innerWidth <= 768) {  // Appliquer l'effet uniquement sur mobile
+        if (window.innerWidth <= 768) {
+            // Sélectionne toutes les images des produits
             const productImages = document.querySelectorAll("#produits .image-container");
-
-            productImages.forEach((image) => {
-                const rect = image.getBoundingClientRect();
-
-                // Vérifier si l'image est dans la fenêtre de visualisation
-                if (rect.top < window.innerHeight && rect.bottom > 0) {
+    
+            // On ajoute un petit délai pour laisser le temps de charger la page
+            setTimeout(() => {
+                // On ajoute la classe 'visible' à chaque image après un délai pour lancer l'animation
+                productImages.forEach((image) => {
                     image.classList.add("visible");
-                } else {
-                    image.classList.remove("visible");
-                }
-            });
+                });
+            }, 500); // 500ms après le chargement de la page
         }
     });
 });
