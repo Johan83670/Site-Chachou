@@ -19,15 +19,20 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        // Effet de scroll pour les images des produits
-        if (window.innerWidth < 768) {  // Si c'est un téléphone
-            productImages.forEach((image) => {
-                const rect = image.getBoundingClientRect();
-                if (rect.top < window.innerHeight && rect.bottom > 0) {
-                    image.classList.add("visible");
-                } else {
-                    image.classList.remove("visible");
-                }
+        // Vérifier si l'écran est mobile
+        if (window.innerWidth <= 768) {
+            const productImages = document.querySelectorAll("#produits .image-container");
+
+            window.addEventListener("scroll", () => {
+                productImages.forEach((image) => {
+                    const rect = image.getBoundingClientRect();
+                    // Vérifie si l'image est dans la fenêtre de visualisation
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        image.classList.add("visible");
+                    } else {
+                        image.classList.remove("visible");
+                    }
+                });
             });
         }
     });
