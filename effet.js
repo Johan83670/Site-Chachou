@@ -19,14 +19,15 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        // Vérifier si l'écran est mobile
-        if (window.innerWidth <= 768) {
-            const productImages = document.querySelectorAll("#produits .image-container");
+        
 
+        if (window.innerWidth <= 768) {  // Appliquer l'effet uniquement sur mobile
+            const productImages = document.querySelectorAll("#produits .image-container");
+    
             window.addEventListener("scroll", () => {
                 productImages.forEach((image) => {
                     const rect = image.getBoundingClientRect();
-                    // Vérifie si l'image est dans la fenêtre de visualisation
+                    // Si l'image est dans la fenêtre de visualisation, on applique la classe visible
                     if (rect.top < window.innerHeight && rect.bottom > 0) {
                         image.classList.add("visible");
                     } else {

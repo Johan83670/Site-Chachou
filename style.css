@@ -80,15 +80,16 @@
         transform: translateY(0);  /* L'image remonte et devient visible */
     }
 
-    /* Pour l'effet "fantôme", on ajoute un léger flou et une ombre */
-    #produits .image-container.visible img {
-        filter: blur(1px);  /* Flou léger */
-        transition: filter 1s ease;
+    #produits .image-container {
+        opacity: 0;
+        transform: scale(0.8);  /* L'image commence plus petite */
+        transition: opacity 1s ease, transform 1s ease;  /* Transition douce pour l'opacité et le zoom */
     }
 
-    /* Lorsque l'image est complètement visible, le flou disparaît */
-    #produits .image-container.visible img {
-        filter: blur(0);
+    /* Lorsqu'elle devient visible, elle se zoom et devient opaque */
+    #produits .image-container.visible {
+        opacity: 1;
+        transform: scale(1);  /* L'image revient à sa taille normale */
     }
 }
 
