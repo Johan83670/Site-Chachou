@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 💡 Ajout de l'effet de scroll sur les produits SEULEMENT sur mobile
     if (window.innerWidth < 768) {
-        const products = document.querySelectorAll(".product");
+        const products = document.querySelectorAll(".image-container");
 
         function checkVisibility() {
             products.forEach((product) => {
