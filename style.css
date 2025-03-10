@@ -219,35 +219,28 @@ nav ul li a:hover {
     z-index: -1;
 }
 
-/* Effet de survol amélioré sur l'image */
+/* Conteneur de l'image */
 #produits .image-container {
     position: relative;
     width: 400px;
     height: 800px;
     overflow: hidden;
     margin: 10px;
-    cursor: pointer; /* Ajout d'un curseur pour indiquer que l'image est cliquable */
+    cursor: pointer; /* Curseur pour indiquer qu'il y a une interaction possible */
+    border: 2px solid #ddd; /* Ajout d'une bordure pour indiquer que c'est un élément interactif */
+    border-radius: 8px; /* Bordure arrondie */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Effet de survol sur l'image */
+/* Image visible par défaut, sans survol */
 #produits .image-container img {
-    position: absolute;
-    top: 0;
-    left: 100%;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease, left 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Lors du survol, l'image devient plus visible et se déplace */
-#produits .image-container:hover img {
-    transform: scale(1.1); /* Légère zoom */
-    left: 0; /* Déplacement de l'image */
-    opacity: 0.8; /* Légère transparence pour un effet de survol */
-}
-
-/* Texte qui apparaît plus nettement au survol */
+/* Texte visible par défaut */
 #produits .text {
     position: absolute;
     top: 50%;
@@ -257,15 +250,44 @@ nav ul li a:hover {
     font-weight: bold;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
     transform: translateY(-50%);
-    opacity: 0; /* Le texte est caché par défaut */
-    visibility: hidden; /* Le texte est caché par défaut */
+    opacity: 1; /* Le texte est toujours visible */
+    visibility: visible; /* Le texte est toujours visible */
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-/* Lorsque l'image est survolée, le texte devient visible */
+/* Ajout d'une icône de survol */
+#produits .image-container::before {
+    content: "👆"; /* Icône pour attirer l'attention */
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    color: #fff;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+/* Effet de survol sur l'image */
+#produits .image-container:hover img {
+    transform: scale(1.1); /* Zoom de l'image */
+    opacity: 0.8; /* Légère transparence */
+}
+
+/* Effet de survol sur le texte (cacher ou modifier si besoin) */
 #produits .image-container:hover .text {
-    opacity: 1;
-    visibility: visible;
+    opacity: 0.8; /* Réduction de l'opacité du texte au survol */
+}
+
+/* Cacher l'icône au survol */
+#produits .image-container:hover::before {
+    opacity: 0;
+}
+
+/* Ajout d'un effet de mise en évidence de la bordure */
+#produits .image-container:hover {
+    border-color: #5CDB95; /* Changer la bordure au survol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajout d'une ombre douce */
 }
 
 /* Section Contact avec image de fond */
