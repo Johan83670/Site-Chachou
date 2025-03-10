@@ -40,6 +40,14 @@
         align-items: center;
         padding: 20px;
         text-align: center; /* Centrer le texte des produits */
+        display: block; /* Forcer l'affichage en bloc pour plus de flexibilité */
+    }
+
+    /* Garder les titres visibles même sur mobile */
+    #produits .text {
+        opacity: 1 !important; /* S'assurer que le texte est toujours visible */
+        font-size: 18px;  /* Réduire un peu la taille sur mobile si nécessaire */
+        color: #333;  /* Couleur de texte */
     }
 
     /* On définit les styles de base des images */
@@ -67,15 +75,7 @@
     #produits .image-container.visible .text {
         opacity: 1;
     }
-
-
-    /* Ajustement du texte des produits */
-    #produits alt {
-        font-size: 20px;  /* Réduction de la taille du texte */
-        margin-top: 10px;  /* Espacement entre l'image et le texte */
-        color: #333;  /* Assurer une couleur de texte visible */
-    }
-
+    
     /* Ajustement du formulaire de contact */
     .contact {
         width: 90%;
@@ -92,7 +92,6 @@
         overflow-x: hidden;
     }
 }
-
 
 
 
