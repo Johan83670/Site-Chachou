@@ -43,7 +43,7 @@
     }
 
     /* On définit les styles de base des images */
-    #produits .image-container {
+    #produits .image-container img{
         opacity: 0; /* L'image commence invisible */
         transform: scale(0.8); /* L'image commence plus petite */
         transition: opacity 1s ease, transform 1s ease; /* Transition douce pour l'opacité et le zoom */
@@ -51,7 +51,7 @@
     }
 
     /* On applique l'effet de fade-in et de zoom lorsque l'image devient visible */
-    #produits .image-container.visible {
+    #produits .image-container.visible img{
         opacity: 1; /* L'image devient visible */
         transform: scale(1); /* L'image prend sa taille normale */
         visibility: visible; /* L'élément devient interactif */
@@ -70,7 +70,7 @@
 
 
     /* Ajustement du texte des produits */
-    #produits .text {
+    #produits alt {
         font-size: 20px;  /* Réduction de la taille du texte */
         margin-top: 10px;  /* Espacement entre l'image et le texte */
         color: #333;  /* Assurer une couleur de texte visible */
