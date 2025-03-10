@@ -1,3 +1,44 @@
+/* Styles pour les écrans de moins de 768px (téléphones) */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    header h1 {
+        font-size: 40px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    #accueil, #produits, #contact {
+        padding: 40px 10px;
+    }
+
+    #produits {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #produits .image-container {
+        width: 90%;
+        height: auto;
+    }
+
+    #contact .contact {
+        width: 90%;
+    }
+}
+
 /* Mise en forme générale */
 body {
     font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
