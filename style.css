@@ -219,14 +219,17 @@ nav ul li a:hover {
     z-index: -1;
 }
 
+/* Effet de survol amélioré sur l'image */
 #produits .image-container {
     position: relative;
     width: 400px;
     height: 800px;
     overflow: hidden;
     margin: 10px;
+    cursor: pointer; /* Ajout d'un curseur pour indiquer que l'image est cliquable */
 }
 
+/* Effet de survol sur l'image */
 #produits .image-container img {
     position: absolute;
     top: 0;
@@ -234,14 +237,17 @@ nav ul li a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease, left 0.3s ease;
+    transition: transform 0.3s ease, left 0.3s ease, opacity 0.3s ease;
 }
 
+/* Lors du survol, l'image devient plus visible et se déplace */
 #produits .image-container:hover img {
-    transform: scale(1.2); /* Agrandissement de l'image */
+    transform: scale(1.1); /* Légère zoom */
     left: 0; /* Déplacement de l'image */
+    opacity: 0.8; /* Légère transparence pour un effet de survol */
 }
 
+/* Texte qui apparaît plus nettement au survol */
 #produits .text {
     position: absolute;
     top: 50%;
@@ -251,7 +257,15 @@ nav ul li a:hover {
     font-weight: bold;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
     transform: translateY(-50%);
+    opacity: 0; /* Le texte est caché par défaut */
+    visibility: hidden; /* Le texte est caché par défaut */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
 
+/* Lorsque l'image est survolée, le texte devient visible */
+#produits .image-container:hover .text {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* Section Contact avec image de fond */
