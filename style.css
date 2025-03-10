@@ -42,37 +42,31 @@
         text-align: center; /* Centrer le texte des produits */
         display: block; /* Forcer l'affichage en bloc pour plus de flexibilité */
     }
-
-    /* On définit les styles de base des images */
-    #produits .image-container:hover img{
-        opacity: 0; /* L'image commence invisible */
-        transform: scale(0.8); /* L'image commence plus petite */
-        transition: opacity 1s ease, transform 1s ease; /* Transition douce pour l'opacité et le zoom */
-        visibility: hidden; /* Masque l'élément avant son apparition */
+    #produits .image-container {
+        position: relative; /* Nécessaire pour la position absolue du texte */
     }
-
-    /* On applique l'effet de fade-in et de zoom lorsque l'image devient visible */
-    #produits .image-container:hover img{
-        opacity: 1; /* L'image devient visible */
-        transform: scale(1); /* L'image prend sa taille normale */
-        visibility: visible; /* L'élément devient interactif */
+    
+    #produits .image-container img {
+        opacity: 1; /* L'image est visible par défaut */
+        transition: opacity 1s ease, transform 1s ease; /* Effet de transition sur l'image */
     }
-
+    
+    #produits .image-container:hover img {
+        opacity: 0; /* L'image devient invisible lorsqu'on survole */
+        transform: scale(0.8); /* L'image se réduit */
+    }
+    
     #produits .text {
         position: absolute;
         top: 50%;
         left: 10px;
+        transform: translateY(-50%);
         color: rgb(255, 255, 255);
         font-size: 40px;
         font-weight: bold;
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
-        transform: translateY(-50%);
-    
-    }
-
-    /* Lorsque l'image devient visible, on rend également le texte visible */
-    #produits .image-container.visible .text {
-        opacity: 1;
+        opacity: 1; /* Le texte reste visible */
+        visibility: visible; /* Assure que le texte est toujours visible */
     }
     
     /* Ajustement du formulaire de contact */
