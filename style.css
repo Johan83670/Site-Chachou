@@ -39,22 +39,30 @@
         flex-direction: column;
         align-items: center;
         padding: 20px;
+        text-align: center; /* Centrer le texte des produits */
     }
 
     #produits .image-container {
         width: 90%;
         max-width: 250px;
         height: auto;
-        opacity: 0; /* Commence avec opacité 0 */
+        opacity: 0;  /* Commence avec opacité 0 */
         transform: scale(0.8);  /* Commence plus petit */
         transition: opacity 1s ease, transform 1s ease;
+        margin-bottom: 10px;  /* Espacement pour éviter que le texte soit trop proche de l'image */
     }
 
     /* Lorsque l'image devient visible, elle remonte et se zoom */
     #produits .image-container.visible {
         opacity: 1;
         transform: scale(1);  /* Reprend sa taille normale */
-        transition: opacity 1s ease, transform 1s ease;
+    }
+
+    /* Ajustement du texte des produits */
+    #produits .text {
+        font-size: 20px;  /* Réduction de la taille du texte */
+        margin-top: 10px;  /* Espacement entre l'image et le texte */
+        color: #333;  /* Assurer une couleur de texte visible */
     }
 
     /* Ajustement du formulaire de contact */
@@ -73,6 +81,7 @@
         overflow-x: hidden;
     }
 }
+
 
 
 
