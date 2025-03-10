@@ -4,6 +4,7 @@
         font-size: 14px; /* Texte plus petit */
         padding: 6px 10px; /* Réduction de la taille */
         border-radius: 3px;
+        white-space: nowrap; /* Empêche les boutons de se casser en plusieurs lignes */
     }
 
     /* Ajustement du header */
@@ -19,7 +20,8 @@
     nav ul {
         display: flex;
         justify-content: center; /* Centrer horizontalement */
-        flex-wrap: wrap; /* Permettre le retour à la ligne si besoin */
+        gap: 10px; /* Espacement entre les boutons */
+        flex-wrap: nowrap; /* Empêche le retour à la ligne */
     }
 
     nav ul li {
