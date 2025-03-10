@@ -1,65 +1,70 @@
 @media screen and (max-width: 768px) {
+    /* Réduction de la taille des boutons */
+    nav ul li a {
+        font-size: 14px; /* Texte plus petit */
+        padding: 8px 12px; /* Réduction de la taille */
+        border-radius: 3px;
+    }
+
     /* Ajustement du header */
     header {
-        padding: 10px;
+        padding: 15px;
     }
 
     header h1 {
-        font-size: 35px;
+        font-size: 40px; /* Titre plus lisible sur mobile */
     }
 
-    /* Correction du menu pour qu'il ne déborde pas */
+    /* Centrage du menu */
     nav ul {
-        display: flex;
         flex-direction: column;
-        padding: 0;
+        align-items: center;
     }
 
     nav ul li {
         display: block;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
 
-    /* Ajustement des sections pour éviter les débordements */
+    /* Ajustement des sections */
     section {
-        padding: 40px 10px;
+        padding: 30px 15px;
     }
 
-    /* Correction du problème des produits qui débordent */
+    /* Correction des produits */
     #produits {
-        display: flex;
         flex-direction: column;
         align-items: center;
         padding: 20px;
     }
 
     #produits .image-container {
-        width: 90%; /* Réduction de la largeur */
-        height: auto; /* Ajustement automatique de la hauteur */
-        max-width: 300px; /* Empêche les images d’être trop grandes */
-    }
-
-    #produits .image-container img {
         width: 100%;
+        max-width: 250px; /* Taille réduite */
         height: auto;
-        left: 0 !important; /* Empêche le décalage de l'image */
     }
 
     #produits .text {
-        font-size: 24px;
-        left: 5px; /* Ajustement du texte */
+        font-size: 20px; /* Réduction du texte */
     }
 
-    /* Ajustement de la section contact */
-    #contact .contact {
+    /* Ajustement du formulaire de contact */
+    .contact {
         width: 90%;
+        padding: 20px;
     }
 
-    /* Empêcher tout débordement */
+    .contact button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* Empêche tout débordement horizontal */
     body, html {
         overflow-x: hidden;
     }
 }
+
 
 
 /* Mise en forme générale */
