@@ -20,7 +20,7 @@
     nav ul {
         display: flex;
         justify-content: center; /* Centrer horizontalement */
-        gap: 5px; /* Espacement entre les boutons */
+        gap: 2px; /* Espacement entre les boutons */
         flex-wrap: nowrap; /* Empêche le retour à la ligne */
     }
 
