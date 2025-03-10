@@ -73,9 +73,8 @@
         transition: opacity 0.5s ease-out, transform 0.5s ease-out;
     }
     
-    .image-container.visible {
-        opacity: 1;
-        transform: translateY(0);
+    #produits .image-container:hover {
+        opacity: 1; /* Pas d'effet de survol */
     }
 }
 

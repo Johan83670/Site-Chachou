@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const navbarLinks = document.querySelectorAll("#navbar ul li a");
     const navbarHeight = document.querySelector("header").offsetHeight;
+    const productImages = document.querySelectorAll("#produits .image-container"); // Sélectionner toutes les images des produits
 
     window.addEventListener("scroll", () => {
         let currentSection = "";
@@ -17,24 +18,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 link.classList.add("active");
             }
         });
-    });
 
-    // 💡 Ajout de l'effet de scroll sur les produits SEULEMENT sur mobile
-    if (window.innerWidth < 768) {
-        const products = document.querySelectorAll(".image-container");
-
-        function checkVisibility() {
-            products.forEach((product) => {
-                const rect = product.getBoundingClientRect();
-                if (rect.top < window.innerHeight - 100 && rect.bottom > 0) {
-                    product.classList.add("visible");
+        // Effet de scroll pour les images des produits
+        if (window.innerWidth < 768) {  // Si c'est un téléphone
+            productImages.forEach((image) => {
+                const rect = image.getBoundingClientRect(); // Position de l'image du produit
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    image.classList.add("visible");
+                } else {
+                    image.classList.remove("visible");
                 }
             });
         }
-
-        // On écoute l'événement de scroll uniquement sur mobile
-        window.addEventListener("scroll", checkVisibility);
-        checkVisibility(); // Vérifie au chargement de la page
-    }
+    });
 });
-
