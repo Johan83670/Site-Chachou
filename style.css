@@ -1,18 +1,18 @@
-/* Styles pour les écrans de moins de 768px (téléphones) */
 @media screen and (max-width: 768px) {
+    /* Ajustement du header */
     header {
         padding: 10px;
-        font-size: 20px;
     }
 
     header h1 {
-        font-size: 40px;
+        font-size: 35px;
     }
 
+    /* Correction du menu pour qu'il ne déborde pas */
     nav ul {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        padding: 0;
     }
 
     nav ul li {
@@ -20,24 +20,47 @@
         margin-bottom: 10px;
     }
 
-    #accueil, #produits, #contact {
+    /* Ajustement des sections pour éviter les débordements */
+    section {
         padding: 40px 10px;
     }
 
+    /* Correction du problème des produits qui débordent */
     #produits {
+        display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 20px;
     }
 
     #produits .image-container {
-        width: 90%;
-        height: auto;
+        width: 90%; /* Réduction de la largeur */
+        height: auto; /* Ajustement automatique de la hauteur */
+        max-width: 300px; /* Empêche les images d’être trop grandes */
     }
 
+    #produits .image-container img {
+        width: 100%;
+        height: auto;
+        left: 0 !important; /* Empêche le décalage de l'image */
+    }
+
+    #produits .text {
+        font-size: 24px;
+        left: 5px; /* Ajustement du texte */
+    }
+
+    /* Ajustement de la section contact */
     #contact .contact {
         width: 90%;
     }
+
+    /* Empêcher tout débordement */
+    body, html {
+        overflow-x: hidden;
+    }
 }
+
 
 /* Mise en forme générale */
 body {
