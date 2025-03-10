@@ -51,29 +51,6 @@
         font-size: 20px; /* Réduction du texte */
     }
 
-    /* Ajustement du formulaire de contact */
-    .contact {
-        width: 90%;
-        padding: 15px;
-    }
-
-    .contact button {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    /* Empêche tout débordement horizontal */
-    body, html {
-        overflow-x: hidden;
-    }
-
-    /* Effet initial : image invisible et légèrement décalée */
-    #produits .image-container {
-        opacity: 0;
-        transform: translateY(20px);  /* Légèrement en bas au départ */
-        transition: opacity 1s ease, transform 1s ease;
-    }
-
     /* Lorsqu'elles deviennent visibles, on applique l'effet de fondu et de décalage */
     #produits .image-container.visible {
         opacity: 1;
@@ -91,6 +68,24 @@
         opacity: 1;
         transform: scale(1);  /* L'image revient à sa taille normale */
     }
+
+    /* Ajustement du formulaire de contact */
+    .contact {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .contact button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* Empêche tout débordement horizontal */
+    body, html {
+        overflow-x: hidden;
+    }
+
+
 }
 
 
