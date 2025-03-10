@@ -68,10 +68,11 @@
     }
 
     #produits .image-container {
+        opacity: 0;
         transition: opacity 1s ease;
     }
-
-    /* Lorsque l'image devient visible, la rendre complètement opaque */
+    
+    /* Lorsque l'image devient visible, elle prend une opacité de 1 */
     #produits .image-container.visible {
         opacity: 1;
     }
