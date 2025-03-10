@@ -1,10 +1,10 @@
 @media screen and (max-width: 768px) {
     /* Réduction de la taille des boutons */
     nav ul li a {
-        font-size: 12px; /* Texte plus petit */
-        padding: 4px 8px; /* Boutons plus petits */
+        font-size: 12px;
+        padding: 4px 8px;
         border-radius: 2px;
-        white-space: nowrap; /* Empêche la coupure en plusieurs lignes */
+        white-space: nowrap;
     }
 
     /* Ajustement du header */
@@ -13,15 +13,15 @@
     }
 
     header h1 {
-        font-size: 30px; /* Titre plus lisible sur mobile */
+        font-size: 30px;
     }
 
     /* Centrage du menu */
     nav ul {
         display: flex;
-        justify-content: center; /* Centrer horizontalement */
-        gap: 2px; /* Espacement entre les boutons */
-        flex-wrap: nowrap; /* Empêche le retour à la ligne */
+        justify-content: center;
+        gap: 2px;
+        flex-wrap: nowrap;
     }
 
     nav ul li {
@@ -43,30 +43,18 @@
 
     #produits .image-container {
         width: 90%;
-        max-width: 250px; /* Taille réduite */
+        max-width: 250px;
         height: auto;
+        opacity: 0; /* Commence avec opacité 0 */
+        transform: scale(0.8);  /* Commence plus petit */
+        transition: opacity 1s ease, transform 1s ease;
     }
 
-    #produits .text {
-        font-size: 20px; /* Réduction du texte */
-    }
-
-    /* Lorsqu'elles deviennent visibles, on applique l'effet de fondu et de décalage */
+    /* Lorsque l'image devient visible, elle remonte et se zoom */
     #produits .image-container.visible {
         opacity: 1;
-        transform: translateY(0);  /* L'image remonte et devient visible */
-    }
-
-    #produits .image-container {
-        opacity: 0;
-        transform: scale(0.8);  /* L'image commence plus petite */
-        transition: opacity 1s ease, transform 1s ease;  /* Transition douce pour l'opacité et le zoom */
-    }
-
-    /* Lorsqu'elle devient visible, elle se zoom et devient opaque */
-    #produits .image-container.visible {
-        opacity: 1;
-        transform: scale(1);  /* L'image revient à sa taille normale */
+        transform: scale(1);  /* Reprend sa taille normale */
+        transition: opacity 1s ease, transform 1s ease;
     }
 
     /* Ajustement du formulaire de contact */
@@ -84,9 +72,8 @@
     body, html {
         overflow-x: hidden;
     }
-
-
 }
+
 
 
 

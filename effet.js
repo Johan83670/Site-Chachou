@@ -33,6 +33,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         });
+
+        // Ajouter la classe visible aux images déjà dans la fenêtre de visualisation au chargement
+        productImages.forEach((image) => {
+            const rect = image.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                image.classList.add("visible");
+            }
+        });
     }
 });
-
