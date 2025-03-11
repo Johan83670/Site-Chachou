@@ -24,7 +24,7 @@ app.post("/send-message", (req, res) => {
         text: `Nouveau message de contact:\nNom: ${name}\nEmail: ${email}\nSujet: ${subject}\nMessage: ${message}`
     };
 
-    const webhookUrl = "https://hooks.slack.com/services/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"; // Ton Webhook Slack
+    const webhookUrl = "https://hooks.slack.com/services/XXXXXXXXXXXXXX"; // Ton Webhook Slack
 
     // Envoyer le message à Slack
     fetch(webhookUrl, {

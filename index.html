@@ -8,12 +8,15 @@
 </head>
 <body>
     <header>
-        <h1>ROSA MARIA</h1>
-        <nav>
+        <h1>ROSA <img src="chemin/vers/ton/image.jpg" alt="cigale_titre"> MARIA</h1>
+        <div class="menu-toggle">&#9776;</div> <!-- Icône hamburger -->
+        <nav id="menu">
             <ul>
                 <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#produits">Produits</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#favoris">Vos Favoris</a></li>
+                <li><a href="#instagram-section">Reseau</a></li>
+                <li><a href="#contact">Contactez-nous</a></li>
+
             </ul>
         </nav>
     </header>
@@ -21,49 +24,123 @@
     <section id="accueil" class="intro">
         <div class="overlay"></div> <!-- Fond sombre -->
         <div class="content">
-            <div class="text">
-                <h2>Bienvenue !</h2>
-                <p>Découvrez Rosa Maria, votre boutique de vêtements inspirée par le soleil et l’élégance du Sud. Entre style intemporel et touches modernes, nous vous proposons des pièces uniques qui reflètent l’authenticité et le charme méditerranéen.
-
-                    Plongez dans notre univers et trouvez la tenue parfaite pour chaque occasion ! ☀️✨</p>
+            <div class="left">
+                <img src="chemin/vers/ton/image.jpg" alt="RosaMariaLOGO" class="accueil-image">
             </div>
+            <div class="moving-images">
+                <div class="image-column image1">
+                    <img src="chemin/vers/image1.jpg" alt="Image 1">
+                    <img src="chemin/vers/image2.jpg" alt="Image 2">
+                    <img src="chemin/vers/image3.jpg" alt="Image 3">
+                </div>
+                <div class="image-column image2">
+                    <img src="chemin/vers/image4.jpg" alt="Image 4">
+                    <img src="chemin/vers/image5.jpg" alt="Image 5">
+                    <img src="chemin/vers/image6.jpg" alt="Image 6">
+                </div>
+                <div class="image-column image3">
+                    <img src="chemin/vers/image7.jpg" alt="Image 7">
+                    <img src="chemin/vers/image8.jpg" alt="Image 8">
+                    <img src="chemin/vers/image9.jpg" alt="Image 9">
+                </div>
+                <div class="image-column image4">
+                    <img src="chemin/vers/image7.jpg" alt="Image 10">
+                    <img src="chemin/vers/image8.jpg" alt="Image 11">
+                    <img src="chemin/vers/image9.jpg" alt="Image 12">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="separation-line"></div>
+
+    <section id="favoris">
+        <h2>Vos Favoris</h2>
+        <div class="image-container-wrapper">
+            <a href="produits.html">
+                <div class="image-container">
+                    <img src="" alt="Produit 1">
+                    <div class="text">Hoodie Sudist</div>
+                </div>
+            </a>
+            <a href="produits.html">
+                <div class="image-container">
+                    <img src="" alt="Produit 2">
+                    <div class="text">Hoodie Amour</div>
+                </div>
+            </a>
+            <a href="produits.html">
+                <div class="image-container">
+                    <img src="" alt="Produit 3">
+                    <div class="text">Hoodie Rosa M</div>
+                </div>
+            </a>
+            <a href="produits.html">
+                <div class="image-container">
+                    <img src="" alt="Produit 4">
+                    <div class="text">Hoodie Cherie</div>
+                </div>
+            </a>
+        </div>
+        <div class="image-container">
+            <img src="graphic-image.jpg" alt="Image Décorative Cigale">
+        </div>
+        <div class="horizontal-lines">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
     </section>
     
+    <section id="instagram-section">
+        <div class="left">
+            <img src="profil-instagram.jpg" alt="Profil Instagram">
+        </div>
 
-    <section id="produits">
-        <div class="overlay"></div>
-        <a href="produits.html">
-            <div class="image-container">
-                <img src="image_site/693770626664_TShirtIconWhite_Back.jpg" alt="Produit 1">
-                <div class="text">Produit 1</div>
-            </div>
-        </a>
-        <a href="produits.html">
-            <div class="image-container">
-                <img src="image_site/dixxon-perfect-blank-tee-white-1_1638x.jpg" alt="Produit 2">
-                <div class="text">Produit 2</div>
-            </div>
-        </a>
-        <a href="produits.html">
-            <div class="image-container">
-                <img src="image_site/st2020_whi.jpg" alt="Produit 3">
-                <div class="text">Produit 3</div>
-            </div>
-        </a>
+        <div class="right">
+            <a href="https://www.instagram.com/votre-compte" target="_blank">
+                <div class="bubble">
+                    <img src="instagram-icon.png" alt="Instagram">
+                </div>
+            </a>
+
+            <a href="https://www.instagram.com/votre-compte" target="_blank">
+                <div class="text-box">
+                    <p>Suivez-nous</p>
+                </div>
+            </a>
+        </div>
     </section>
 
     <section id="contact">
-        <h2>Contact</h2>
-        <p>Nous sommes à votre écoute !</p>
-        <a href="contact.html">
-            <button>Nous contacter</button>
-        </a>
+        <h2>Contactez-nous</h2>
+    
+        <div class="contact-info">
+            <p><strong>Mail :</strong> rosamaria.brand@gmail.com</p>
+            <p><strong>Téléphone :</strong> 07 65 55 02 19</p>
+            <p><strong>Instagram :</strong> <a href="https://www.instagram.com/rosamaria.brand" target="_blank">rosamaria.brand</a></p>
+            <p><strong>Tiktok :</strong> <a href="https://www.tiktok.com/@rosamaria.brand" target="_blank">rosamaria.brand</a></p>
+        </div>
+
+        <div class="contact-links">
+            <p><a href="#">Mentions légales</a></p>
+            <p><a href="#">Conditions générales de vente</a></p>
+            <p><a href="#">Retours et Rembourssements</a></p>
+        </div>
+    </div>
+
+    <div class="en-savoir-plus">
+        <h3>En savoir plus</h3>
+        <p><a href="#">Notre histoire</a></p>
+        <p><a href="#">Vos commandes et livraisons</a></p>
+        <p><a href="#">Moyens de paiements</a></p>
+    </div>
     </section>
 
     <footer>
         <p>&copy; Chachou 2025</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="effet.js"></script>
 </body>
 </html>
