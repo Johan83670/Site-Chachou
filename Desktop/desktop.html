@@ -3,13 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenue sur notre site de vêtements Rosa Maria</title>
+    <title>Rosa Maria</title>
     <link rel="stylesheet" href="style.css">
-</head>
+
+</head>    
+<script src="../effet.js"></script>
+
 <body>
     <header>
-        <h1>ROSA <img src="chemin/vers/ton/image.jpg" alt="cigale_titre"> MARIA</h1>
-        <div class="menu-toggle">&#9776;</div> <!-- Icône hamburger -->
+        <div class="header-left">
+            <div class="menu-toggle">&#9776;</div>
+        </div>
+    
+        <div class="header-center">
+            <h1>ROSA <img src="chemin/vers/ton/image.jpg" alt="cigale_titre"> MARIA</h1>
+        </div>
+    
+        <div class="header-right">
+            <a href="panier.html" id="panier-lien">
+                🛒 <span id="nmb-article">0</span>
+            </a>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                let panier = JSON.parse(localStorage.getItem("panier")) || [];
+                let totalArticles = panier.reduce((acc, produit) => acc + produit.quantite, 0);
+                const nombreArticles = document.getElementById("nmb-article");
+                if (nombreArticles) {
+                    nombreArticles.textContent = totalArticles;
+                }
+            });
+        </script>
+    
         <nav id="menu">
             <ul>
                 <li><a href="#accueil">Accueil</a></li>
@@ -141,7 +166,7 @@
     <footer>
         <p>&copy; Chachou 2025. Tous droits réservés.</p>
     </footer>
-
     <script src="../effet.js"></script>
+    <script src="../panier.js"></script>
 </body>
 </html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Panier d'achat</title>
+        <link rel="stylesheet" href="style.css">
+        <script defer src="../panier.js"></script>
+        <script defer src="../effet.js"></script>
+    </head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="menu-toggle">&#9776;</div>
+        </div>
+    
+        <div class="header-center">
+            <h1>ROSA <img src="chemin/vers/ton/image.jpg" alt="cigale_titre"> MARIA</h1>
+        </div>  
+    
+        <div class="header-right">
+            <a href="panier.html" id="panier-lien">
+                🛒 <span id="nmb-article">0</span>
+            </a>
+        </div>
+    
+        <nav id="menu">
+            <ul>
+                <li><a href="desktop.html">Accueil</a></li>
+                <li><a href="contact.html">Contactez-nous</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Produits</h1>
+    <div id="produits">
+        <div class="produit" data-id="1" data-nom="Produit 1" data-prix="10">
+            <p>Produit 1 - 10€</p>
+            <button class="ajouter-panier">Ajouter au panier</button>
+        </div>
+        <div class="produit" data-id="2" data-nom="Produit 2" data-prix="15">
+            <p>Produit 2 - 15€</p>
+            <button class="ajouter-panier">Ajouter au panier</button>
+        </div>
+    </div>
+
+    <h2>Panier</h2>
+    <ul id="panier-liste"></ul>
+    <p><span id="total">0€</span></p>
+    <button id="vider-panier">Vider le panier</button>
+</body>
+</html>

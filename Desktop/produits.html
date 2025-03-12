@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nos produits - T SHIRT</title>
     <link rel="stylesheet" href="style.css">
+    <script src="../effet.js"></script>
+    <script defer src="../panier.js"></script>
     <style>
         /* CSS pour la rotation de l'image */
         .produit {
@@ -34,8 +36,32 @@
 </head>
 <body>
     <header>
-        <h1>ROSA <img src="chemin/vers/ton/image.jpg" alt="cigale_titre"> MARIA</h1>
-        <div class="menu-toggle">&#9776;</div> <!-- Icône hamburger -->
+        <div class="header-left">
+            <div class="menu-toggle">&#9776;</div>
+        </div>
+    
+        <div class="header-center">
+            <h1>ROSA <img src="chemin/vers/ton/image.jpg" alt="cigale_titre"> MARIA</h1>
+        </div>
+    
+        <div class="header-right">
+            <a href="panier.html" id="panier-lien">
+                🛒 <span id="nmb-article">0</span>
+            </a>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                let panier = JSON.parse(localStorage.getItem("panier")) || [];
+                let totalArticles = panier.reduce((acc, produit) => acc + produit.quantite, 0);
+                const nombreArticles = document.getElementById("nmb-article");
+                if (nombreArticles) {
+                    nombreArticles.textContent = totalArticles;
+                }
+            });
+        </script>
+
+    
         <nav id="menu">
             <ul>
                 <li><a href="desktop.html">Accueil</a></li>
@@ -44,34 +70,35 @@
         </nav>
     </header>
 
+
     <section class="produits">
         <h2>Nos produits</h2>
         
-        <div class="produit">
+        <div class="produit" data-id="3" data-nom="Beau" data-prix="200">
             <img src="" alt="T-shirt 1">
             <div class="description">
                 <h3>Il est trop beau</h3>
                 <p>Il est génial</p>
                 <p><strong>Prix : 200€</strong></p>
-            </div>
+            </div><button class="ajouter-panier">Ajouter au panier</button>
         </div>
 
-        <div class="produit">
+        <div class="produit" data-id="4" data-nom="T-shirt 2" data-prix="150">
             <img src="" alt="T-shirt 2">
             <div class="description">
                 <h3>Il est fou</h3>
                 <p>TU vas kiffer 100%</p>
-                <p><strong>Prix : 150€</strong></p>
-            </div>
+                <p><strong>Prix : 150€</strong></p>         
+            </div><button class="ajouter-panier">Ajouter au panier</button>
         </div>
 
-        <div class="produit">
+        <div class="produit" data-id="5" data-nom="T-shirt 3" data-prix="100">
             <img src="" alt="T-shirt 3">
             <div class="description">
                 <h3>Ouais Pas Mal</h3>
                 <p>Achete</p>
                 <p><strong>Prix : 100€</strong></p>
-            </div>
+            </div><button class="ajouter-panier">Ajouter au panier</button>
         </div>
 
     </section>
@@ -79,6 +106,6 @@
     <footer>
         <p>&copy; Chachou 2025. Tous droits réservés.</p>
     </footer>
-    <script src="../effet.js"></script>
+
 </body>
 </html>
