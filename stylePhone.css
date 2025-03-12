@@ -268,24 +268,23 @@ h2 {
     margin-bottom: 20px;
 }
 
-
 .image-container-wrapper {
     display: flex; 
     justify-content: center;
     gap: 3px; 
     width: 100%;
-
+    flex-wrap: wrap; /* Permet aux éléments de se réorganiser sur plusieurs lignes */
 }
 
 .image-container {
-    width: 200px; 
+    width: 45%; /* Prend 45% de la largeur de l'écran, ajustable */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .image-container img {
-    max-width: 100%;
+    max-width: 100%; /* Assure que l'image ne dépasse pas la largeur de son conteneur */
     height: auto;
     border-radius: 8px;
 }
@@ -295,6 +294,7 @@ h2 {
     font-size: 16px;
     color: #333;
 }
+
 
 .image-container:last-child img {
     width: 50px;
