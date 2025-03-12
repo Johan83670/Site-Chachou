@@ -7,6 +7,8 @@ body {
     margin: 0;
     padding: 0;
     background-color: #ffffff;
+    max-width: 100vw; /* Limite la largeur à la largeur de l'écran */
+
 }
 
 /* Header */
@@ -129,7 +131,7 @@ header h1 {
 
 .accueil-image {
     width: 100%;
-    max-width: 600px; /* Ajuste la taille de ton image principale */
+    max-width: 100%; /* Assure que l'image ne dépasse pas la largeur de l'écran */
     height: 600px;
     position:initial; /* Permet de positionner les colonnes par rapport à cette image */
 }
