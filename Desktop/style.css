@@ -211,19 +211,19 @@ header h1 {
 
 /* Applique l'animation à chaque image dans les colonnes */
 .image1 img {
-    animation: moveUpDown 10s infinite;
+    animation: moveUpDown 15s infinite;
 }
 
 .image2 img {
-    animation: moveDownUp 10s infinite;
+    animation: moveDownUp 19s infinite;
 }
 
 .image3 img {
-    animation: moveUpDown 10s infinite;
+    animation: moveUpDown 14s infinite;
 }
 
 .image4 img {
-    animation: moveDownUp 10s infinite;
+    animation: moveDownUp 17s infinite;
 }
 
 
