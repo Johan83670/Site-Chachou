@@ -150,14 +150,14 @@ header h1 {
     flex-direction: column; /* Les images dans la colonne seront empilées verticalement */
     justify-content: center;
     align-items: center;
-    width: 30%; /* Chaque colonne occupera 30% de l'espace disponible */
+    width: 50%; /* Chaque colonne occupera 30% de l'espace disponible */
 }
 
 /* Exemple de positionnement des colonnes */
 .image1 {
     position: absolute;
     top: 100px; /* Positionne cette colonne à 100px du haut */
-    left: 45%; /* Positionne cette colonne à 10% de la largeur de l'image principale */
+    left: 100%; /* Positionne cette colonne à 10% de la largeur de l'image principale */
 }
 
 .image2 {
@@ -181,7 +181,7 @@ header h1 {
 .image-column img {
     width: 100px; /* Ajuste la taille des images dans chaque colonne */
     height: auto;
-    margin-bottom: 20px; /* Espacement entre les images */
+    margin-bottom: 3px; /* Espacement entre les images */
 }
 
 /* Animation pour les images dans chaque colonne */
