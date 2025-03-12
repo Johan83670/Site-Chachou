@@ -258,7 +258,7 @@ h2 {
 .image-container-wrapper {
     display: flex; /* Affiche les images horizontalement */
     justify-content: center; /* Centre les images horizontalement */
-    gap: 5px; /* Ajoute un espacement entre les images */
+    gap: 20px; /* Ajoute un espacement entre les images */
 }
 
 .image-container {
