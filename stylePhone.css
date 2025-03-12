@@ -23,7 +23,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
+    height: 40px;
     background-color: #F6F1E9;
     position: relative;
     font-family: 'Playfair Display', serif;
@@ -65,7 +65,7 @@ header h1 {
     position: fixed;
     left: -250px; /* Caché à gauche */
     top: 0;
-    width: 250px;
+    width: 200px;
     height: 100%;
     background: #F6F1E9; /* Couleur de fond */
     transition: left 0.3s ease-in-out;
