@@ -271,7 +271,7 @@ h2 {
 .image-container-wrapper {
     display: flex; 
     justify-content: center;
-    gap: 10px; 
+    gap: 50px; 
     width: 100%;
     flex-wrap: wrap; /* Permet aux éléments de se réorganiser sur plusieurs lignes */
 }
