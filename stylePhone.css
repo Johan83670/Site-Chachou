@@ -116,7 +116,7 @@ header h1 {
 .content {
     display: flex;
     align-items: center;
-    height: 400px;                /* Hauteur définie */
+    height: 400px; 
     justify-content: space-between;
     max-width: 1200px;
     width: 100%;
@@ -131,62 +131,61 @@ header h1 {
 
 .accueil-image {
     width: 100%;
-    max-width: 100%; /* Assure que l'image ne dépasse pas la largeur de l'écran */
+    max-width: 100%;
     height: 600px;
-    position:initial; /* Permet de positionner les colonnes par rapport à cette image */
+    position:initial;
 }
 
 .moving-images {
-    position: absolute; /* Positionne la section des images de manière absolue par rapport au parent */
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex; /* Utilise flexbox pour les colonnes */
-    justify-content: space-between; /* Espacement entre les colonnes */
+    display: flex;
+    justify-content: space-between; 
 }
 
 .image-column {
-    position: relative; /* Permet de positionner les images dans la colonne */
+    position: relative;
     display: flex;
-    flex-direction: column; /* Les images dans la colonne seront empilées verticalement */
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
-    width: 50%; /* Chaque colonne occupera 30% de l'espace disponible */
+    width: 50%; 
 }
 
-/* Exemple de positionnement des colonnes */
 .image1 {
     position: absolute;
-    top: 100px; /* Positionne cette colonne à 100px du haut */
-    left: 100%; /* Positionne cette colonne à 10% de la largeur de l'image principale */
+    top: 100px; 
+    left: 100%; 
 }
 
 .image2 {
     position: absolute;
-    top: 50px; /* Positionne cette colonne à 50px du haut */
-    left: 50%; /* Positionne cette colonne à 40% de la largeur de l'image principale */
+    top: 50px;
+    left: 50%;
 }
 
 .image3 {
     position: absolute;
-    top: 200px; /* Positionne cette colonne à 200px du haut */
-    left: 55%; /* Positionne cette colonne à 70% de la largeur de l'image principale */
+    top: 200px; 
+    left: 55%; 
 }
 
 .image4 {
     position: absolute;
-    top: 70px; /* Positionne cette colonne à 200px du haut */
-    left: 60%; /* Positionne cette colonne à 70% de la largeur de l'image principale */
+    top: 70px;
+    left: 60%; 
 }
 
 .image-column img {
-    width: 100px; /* Ajuste la taille des images dans chaque colonne */
+    width: 100px; 
     height: auto;
-    margin-bottom: 3px; /* Espacement entre les images */
+    margin-bottom: 3px; 
 }
 
-/* Animation pour les images dans chaque colonne */
+
 @keyframes moveUpDown {
     0% {
         transform: translateY(100%);
@@ -248,57 +247,57 @@ header h1 {
     align-items: center;
     text-align: center;
     padding: 20px;
-    background-color: #c9eaff; /* Couleur de fond de la section favoris */
-    margin-top: 0px; /* Marge au-dessus pour séparer de la ligne */
+    background-color: #c9eaff;
+    margin-top: 0px;
 }
 
 h2 {
-    margin-bottom: 20px; /* Ajoute un espacement sous le titre */
+    margin-bottom: 20px;
 }
 
 
 .image-container-wrapper {
-    display: flex; /* Affiche les images horizontalement */
-    justify-content: center; /* Centre les images horizontalement */
-    gap: 5px; /* Ajoute un espacement entre les images */
+    display: flex; 
+    justify-content: center;
+    gap: 3px; 
 }
 
 .image-container {
-    width: 200px; /* Largeur des conteneurs d'images */
+    width: 200px; 
     display: flex;
-    flex-direction: column; /* Pour que l'image et le texte soient empilés verticalement */
+    flex-direction: column;
     align-items: center;
 }
 
 .image-container img {
     max-width: 100%;
     height: auto;
-    border-radius: 8px; /* Ajoute des coins arrondis à l'image si souhaité */
+    border-radius: 8px;
 }
 
 .text {
-    margin-top: 10px; /* Espacement entre l'image et le texte */
+    margin-top: 10px;
     font-size: 16px;
     color: #333;
 }
 
 .image-container:last-child img {
-    width: 50px;  /* Ajustez la taille si nécessaire */
-    margin-top: 10px;  /* Donne un espace avant l'image */
+    width: 50px;
+    margin-top: 10px;  
 }
 
 .horizontal-lines {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: 30px; /* Espace entre l'image et les lignes */
+    margin-top: 30px;
 }
 
 .line {
-    width: 400px; /* Longueur des lignes */
-    height: 1px;  /* Épaisseur des lignes */
-    background-color: black; /* Couleur des lignes */
-    margin: 0 auto; /* Centrer les lignes */
+    width: 400px; 
+    height: 1px; 
+    background-color: black; 
+    margin: 0 auto; 
 }
 
 
@@ -312,11 +311,10 @@ h2 {
     background-color: #f9f9f9;
 }
 
-/* Contenu gauche - Grande image de profil Instagram */
 .left img {
     max-width: 100%;
     height: auto;
-    width: 400px; /* Ajustez la taille de l'image à votre convenance */
+    width: 400px; 
     border-radius: 15px;
 }
 
@@ -338,13 +336,13 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0; /* Fond de la bulle */
+    background-color: #f0f0f0; 
     transition: transform 0.3s ease;
-    margin-bottom: 20px; /* Espacement entre la bulle et le texte */
+    margin-bottom: 20px; 
 }
 
 .bubble:hover {
-    transform: scale(1.1); /* Agrandissement au survol */
+    transform: scale(1.1); 
 }
 
 .bubble img {
@@ -357,7 +355,7 @@ h2 {
 .text-box {
     background-color: #000000;
     padding: 15px 25px;
-    border-radius: 25px; /* Bords très arrondis */
+    border-radius: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -370,13 +368,13 @@ h2 {
 }
 
 a {
-    text-decoration: none; /* Supprime la décoration du lien */
-    color: #ffffff; /* Couleur du texte du lien */
+    text-decoration: none; 
+    color: #ffffff;
 }
 
 /* Effet au survol du texte */
 .text-box:hover {
-    background-color: #252323; /* Changer la couleur du fond au survol */
+    background-color: #252323;
 }
 
 
@@ -497,8 +495,8 @@ a {
 
 
 footer {
-    background-color: #000; /* Fond noir */
-    color: #fff; /* Texte blanc */
+    background-color: #000;
+    color: #fff;
     text-align: center;
     padding: 20px;
     font-size: 14px;
