@@ -223,6 +223,7 @@ h2 {
     display: flex;
     justify-content: center;
     gap: 5px;
+    max-width: 100%;
 }
 
 .image-container {
