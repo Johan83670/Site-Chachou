@@ -3,28 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenue sur Rosa Maria (Mobile)</title>
-    <link rel="stylesheet" href="stylePhone.css">
+    <title>Bienvenue sur notre site de vêtements Rosa Maria</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
         <h1>ROSA <img src="chemin/vers/ton/image.jpg" alt="cigale_titre"> MARIA</h1>
         <div class="menu-toggle">&#9776;</div> <!-- Icône hamburger -->
         <nav id="menu">
             <ul>
                 <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#favoris">Favoris</a></li>
-                <li><a href="#instagram-section">Réseaux</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#favoris">Vos Favoris</a></li>
+                <li><a href="#instagram-section">Reseau</a></li>
+                <li><a href="#contact">Contactez-nous</a></li>
+
             </ul>
         </nav>
     </header>
 
     <section id="accueil" class="intro">
-        <div class="overlay"></div> 
+        <div class="overlay"></div> <!-- Fond sombre -->
         <div class="content">
-            <img src="chemin/vers/ton/image.jpg" alt="RosaMariaLOGO" class="accueil-image">
+            <div class="left">
+                <img src="chemin/vers/ton/image.jpg" alt="RosaMariaLOGO" class="accueil-image">
+            </div>
+            <div class="moving-images">
+                <div class="image-column image1">
+                    <img src="chemin/vers/image1.jpg" alt="Image 1">
+                    <img src="chemin/vers/image2.jpg" alt="Image 2">
+                    <img src="chemin/vers/image3.jpg" alt="Image 3">
+                </div>
+                <div class="image-column image2">
+                    <img src="chemin/vers/image4.jpg" alt="Image 4">
+                    <img src="chemin/vers/image5.jpg" alt="Image 5">
+                    <img src="chemin/vers/image6.jpg" alt="Image 6">
+                </div>
+                <div class="image-column image3">
+                    <img src="chemin/vers/image7.jpg" alt="Image 7">
+                    <img src="chemin/vers/image8.jpg" alt="Image 8">
+                    <img src="chemin/vers/image9.jpg" alt="Image 9">
+                </div>
+                <div class="image-column image4">
+                    <img src="chemin/vers/image7.jpg" alt="Image 10">
+                    <img src="chemin/vers/image8.jpg" alt="Image 11">
+                    <img src="chemin/vers/image9.jpg" alt="Image 12">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -45,27 +69,73 @@
                     <div class="text">Hoodie Amour</div>
                 </div>
             </a>
+            <a href="produits.html">
+                <div class="image-container">
+                    <img src="" alt="Produit 3">
+                    <div class="text">Hoodie Rosa M</div>
+                </div>
+            </a>
+            <a href="produits.html">
+                <div class="image-container">
+                    <img src="" alt="Produit 4">
+                    <div class="text">Hoodie Cherie</div>
+                </div>
+            </a>
+        </div>
+        <div class="image-container">
+            <img src="graphic-image.jpg" alt="Image Décorative Cigale">
+        </div>
+        <div class="horizontal-lines">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
         </div>
     </section>
-
+    
     <section id="instagram-section">
-        <div class="social-links">
+        <div class="left">
             <a href="https://www.tiktok.com/@rosamaria.brand" target="_blank">
-                <img src="profil-tiktok.jpg" alt="Profil TikTok">
-            </a>
+            <img src="profil-tiktok.jpg" alt="Profil TikTok">
+        </div>
+
+        <div class="right">
             <a href="https://www.instagram.com/rosamaria.brand" target="_blank">
-                <img src="instagram-icon.png" alt="Instagram">
-                <p>Suivez-nous</p>
+                <div class="bubble">
+                    <img src="instagram-icon.png" alt="Instagram">
+                </div>
+            </a>
+
+            <a href="https://www.instagram.com/rosamaria.brand" target="_blank">
+                <div class="text-box">
+                    <p>Suivez-nous</p>
+                </div>
             </a>
         </div>
     </section>
 
     <section id="contact">
         <h2>Contactez-nous</h2>
-        <p><strong>Mail :</strong> rosamaria.brand@gmail.com</p>
-        <p><strong>Téléphone :</strong> 07 65 55 02 19</p>
-        <p><strong>Instagram :</strong> <a href="https://www.instagram.com/rosamaria.brand">rosamaria.brand</a></p>
-        <p><strong>Tiktok :</strong> <a href="https://www.tiktok.com/@rosamaria.brand">rosamaria.brand</a></p>
+    
+        <div class="contact-info">
+            <p><strong>Mail :</strong> rosamaria.brand@gmail.com</p>
+            <p><strong>Téléphone :</strong> 07 65 55 02 19</p>
+            <p><strong>Instagram :</strong> <a href="https://www.instagram.com/rosamaria.brand" target="_blank">rosamaria.brand</a></p>
+            <p><strong>Tiktok :</strong> <a href="https://www.tiktok.com/@rosamaria.brand" target="_blank">rosamaria.brand</a></p>
+        </div>
+
+        <div class="contact-links">
+            <p><a href="#">Mentions légales</a></p>
+            <p><a href="contact.html#conditions">Conditions générales de vente</a></p>
+            <p><a href="contact.html">Retours et Rembourssements</a></p>
+        </div>
+    </div>
+
+    <div class="en-savoir-plus">
+        <h3>En savoir plus</h3>
+        <p><a href="#">Notre histoire</a></p>
+        <p><a href="#">Vos commandes et livraisons</a></p>
+        <p><a href="#">Moyens de paiements</a></p>
+    </div>
     </section>
 
     <footer>
