@@ -1,13 +1,20 @@
 /* Importer les polices depuis Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Great+Vibes&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 /* Style global */
 body {
     font-family: 'Cinzel Decorative', serif;
     margin: 0;
     padding: 0;
     background-color: #ffffff;
-    max-width: 100vw; /* Limite la largeur à la largeur de l'écran */
+    max-width: 90vw; /* Limite la largeur à la largeur de l'écran */
 
 }
 
