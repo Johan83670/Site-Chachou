@@ -41,7 +41,7 @@ header:hover h1 {
 
 header h1 {
     margin: 0;
-    font-size: 48px;
+    font-size: 40px;
     color: #fff;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
     font-family: 'Times New Roman', Times, serif;
@@ -114,7 +114,7 @@ header h1 {
 .content {
     display: flex;
     align-items: center;
-    height: 300px;                /* Hauteur définie */
+    height: 400px;                /* Hauteur définie */
     justify-content: space-between;
     max-width: 1200px;
     width: 100%;
@@ -150,26 +150,26 @@ header h1 {
     flex-direction: column; /* Les images dans la colonne seront empilées verticalement */
     justify-content: center;
     align-items: center;
-    width: 50%; /* Chaque colonne occupera 30% de l'espace disponible */
+    width: 30%; /* Chaque colonne occupera 30% de l'espace disponible */
 }
 
 /* Exemple de positionnement des colonnes */
 .image1 {
     position: absolute;
     top: 100px; /* Positionne cette colonne à 100px du haut */
-    left: 30%; /* Positionne cette colonne à 10% de la largeur de l'image principale */
+    left: 45%; /* Positionne cette colonne à 10% de la largeur de l'image principale */
 }
 
 .image2 {
     position: absolute;
     top: 50px; /* Positionne cette colonne à 50px du haut */
-    left: 40%; /* Positionne cette colonne à 40% de la largeur de l'image principale */
+    left: 50%; /* Positionne cette colonne à 40% de la largeur de l'image principale */
 }
 
 .image3 {
     position: absolute;
     top: 200px; /* Positionne cette colonne à 200px du haut */
-    left: 50%; /* Positionne cette colonne à 70% de la largeur de l'image principale */
+    left: 55%; /* Positionne cette colonne à 70% de la largeur de l'image principale */
 }
 
 .image4 {
@@ -245,7 +245,7 @@ header h1 {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 30px;
+    padding: 20px;
     background-color: #c9eaff; /* Couleur de fond de la section favoris */
     margin-top: 0px; /* Marge au-dessus pour séparer de la ligne */
 }
