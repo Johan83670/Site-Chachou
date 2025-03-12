@@ -14,19 +14,19 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
+    height: 80px;
     background-color: #F6F1E9;
     position: relative;
     font-family: 'Playfair Display', serif;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
     transition: all 0.3s ease;
 }
 
 header img {
-    width: 40px;
+    width: 50px;
     height: auto;
-    margin-left: 15px;
+    margin-left: 20px;
 }
 
 h1 {
@@ -41,28 +41,30 @@ header:hover h1 {
 
 header h1 {
     margin: 0;
-    font-size: 32px;
+    font-size: 48px;
     color: #fff;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
     font-family: 'Times New Roman', Times, serif;
 }
 
+
+
 /* Menu latéral caché */
 #menu {
     position: fixed;
-    left: -200px;
+    left: -250px; /* Caché à gauche */
     top: 0;
-    width: 200px;
+    width: 250px;
     height: 100%;
-    background: #F6F1E9;
+    background: #F6F1E9; /* Couleur de fond */
     transition: left 0.3s ease-in-out;
-    padding-top: 50px;
-    z-index: 1000;
+    padding-top: 60px;
+    z-index: 1000; /* S'assurer qu'il est au-dessus des autres éléments */
 }
 
 /* Menu visible lorsqu'il est activé */
 #menu.active {
-    left: 0;
+    left: 0; /* Déplace le menu à gauche */
 }
 
 /* Liste des éléments du menu */
@@ -73,7 +75,7 @@ header h1 {
 }
 
 #menu ul li {
-    padding: 8px;
+    padding: 10px;
     text-align: center;
 }
 
@@ -81,76 +83,105 @@ header h1 {
     text-decoration: none;
     color: black;
     display: block;
-    padding: 8px 15px;
+    padding: 10px 20px;
 }
 
 /* Icône hamburger */
 .menu-toggle {
     display: block;
     cursor: pointer;
-    font-size: 24px;
-    z-index: 2000;
+    font-size: 30px;
+    z-index: 2000; /* S'assurer que l'icône hamburger est au-dessus du menu */
     position: absolute;
-    top: 15px;
-    left: 15px;
+    top: 20px;
+    left: 20px;
     background-color: transparent;
 }
 
-/* Accueil */
+
+
+/*Accueil*/
+
 #accueil {
     display: flex;
     align-items: center;
     justify-content: flex-start ;
     overflow: hidden; 
-    padding: 15px;
+    padding: 20px;
     position: relative;
 }
 
 .content {
     display: flex;
     align-items: center;
-    height: 250px;
+    height: 300px;                /* Hauteur définie */
     justify-content: space-between;
-    max-width: 100%;
+    max-width: 1200px;
     width: 100%;
 }
 
 .left {
-    flex: 0 0 30%;
-    padding-right: 15px;
+    flex: 0 0 40px;
+    padding-right: 20px;
     position: relative;
+
 }
 
 .accueil-image {
     width: 100%;
-    max-width: 300px;
-    height: 300px;
-    position: initial;
+    max-width: 600px; /* Ajuste la taille de ton image principale */
+    height: 600px;
+    position:initial; /* Permet de positionner les colonnes par rapport à cette image */
 }
 
 .moving-images {
-    position: absolute;
+    position: absolute; /* Positionne la section des images de manière absolue par rapport au parent */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: space-between;
+    display: flex; /* Utilise flexbox pour les colonnes */
+    justify-content: space-between; /* Espacement entre les colonnes */
 }
 
 .image-column {
-    position: relative;
+    position: relative; /* Permet de positionner les images dans la colonne */
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Les images dans la colonne seront empilées verticalement */
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 50%; /* Chaque colonne occupera 30% de l'espace disponible */
+}
+
+/* Exemple de positionnement des colonnes */
+.image1 {
+    position: absolute;
+    top: 100px; /* Positionne cette colonne à 100px du haut */
+    left: 30%; /* Positionne cette colonne à 10% de la largeur de l'image principale */
+}
+
+.image2 {
+    position: absolute;
+    top: 50px; /* Positionne cette colonne à 50px du haut */
+    left: 40%; /* Positionne cette colonne à 40% de la largeur de l'image principale */
+}
+
+.image3 {
+    position: absolute;
+    top: 200px; /* Positionne cette colonne à 200px du haut */
+    left: 50%; /* Positionne cette colonne à 70% de la largeur de l'image principale */
+}
+
+.image4 {
+    position: absolute;
+    top: 70px; /* Positionne cette colonne à 200px du haut */
+    left: 60%; /* Positionne cette colonne à 70% de la largeur de l'image principale */
 }
 
 .image-column img {
-    width: 60px;
+    width: 100px; /* Ajuste la taille des images dans chaque colonne */
     height: auto;
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* Espacement entre les images */
 }
 
 /* Animation pour les images dans chaque colonne */
@@ -195,123 +226,136 @@ header h1 {
     animation: moveDownUp 10s infinite;
 }
 
+
+
 /* Bande Noir de Separation */
 .separation-line {
-    width: 100%;
-    height: 20px;
-    background-color: #000;
-    margin: 0;
+    width: 100%; /* Prend toute la largeur de la page */
+    height: 30px; /* Hauteur de la bande noire */
+    background-color: #000; /* Couleur de la bande (noir) */
+    margin: 0px 0; /* Espace autour de la bande */
 }
 
-/* Section favoris */
+
+
+/* Styles pour la section favoris */
 #favoris {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
-    background-color: #c9eaff;
-    margin-top: 0;
+    padding: 30px;
+    background-color: #c9eaff; /* Couleur de fond de la section favoris */
+    margin-top: 0px; /* Marge au-dessus pour séparer de la ligne */
 }
 
 h2 {
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* Ajoute un espacement sous le titre */
 }
 
+
 .image-container-wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    max-width: 100%;
+    display: flex; /* Affiche les images horizontalement */
+    justify-content: center; /* Centre les images horizontalement */
+    gap: 5px; /* Ajoute un espacement entre les images */
 }
 
 .image-container {
-    width: 150px;
+    width: 200px; /* Largeur des conteneurs d'images */
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Pour que l'image et le texte soient empilés verticalement */
     align-items: center;
 }
 
 .image-container img {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 8px; /* Ajoute des coins arrondis à l'image si souhaité */
 }
 
 .text {
-    margin-top: 8px;
-    font-size: 14px;
+    margin-top: 10px; /* Espacement entre l'image et le texte */
+    font-size: 16px;
     color: #333;
 }
 
 .image-container:last-child img {
-    width: 40px;
-    margin-top: 8px;
+    width: 50px;  /* Ajustez la taille si nécessaire */
+    margin-top: 10px;  /* Donne un espace avant l'image */
 }
 
 .horizontal-lines {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    margin-top: 20px;
+    gap: 10px;
+    margin-top: 30px; /* Espace entre l'image et les lignes */
 }
 
 .line {
-    width: 200px;
-    height: 1px;
-    background-color: black;
-    margin: 0 auto;
+    width: 400px; /* Longueur des lignes */
+    height: 1px;  /* Épaisseur des lignes */
+    background-color: black; /* Couleur des lignes */
+    margin: 0 auto; /* Centrer les lignes */
 }
+
+
 
 /* Section Instagram */
 #instagram-section {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 50px;
     background-color: #f9f9f9;
 }
 
+/* Contenu gauche - Grande image de profil Instagram */
 .left img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
-    max-width: 250px;
-    border-radius: 10px;
+    width: 400px; /* Ajustez la taille de l'image à votre convenance */
+    border-radius: 15px;
 }
 
+/* Contenu droit - Bulle image et texte */
 .right {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-left: 20px;
 }
 
+/* Bulle Image Instagram */
 .bubble {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0;
-    margin-bottom: 15px;
+    background-color: #f0f0f0; /* Fond de la bulle */
+    transition: transform 0.3s ease;
+    margin-bottom: 20px; /* Espacement entre la bulle et le texte */
 }
 
 .bubble:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Agrandissement au survol */
 }
 
 .bubble img {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
 }
 
+/* Texte Suivez-nous */
 .text-box {
     background-color: #000000;
-    padding: 10px 15px;
-    border-radius: 20px;
+    padding: 15px 25px;
+    border-radius: 25px; /* Bords très arrondis */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -319,39 +363,76 @@ h2 {
 }
 
 .text-box p {
-    font-size: 14px;
+    font-size: 18px;
     margin: 0;
 }
 
+a {
+    text-decoration: none; /* Supprime la décoration du lien */
+    color: #ffffff; /* Couleur du texte du lien */
+}
+
+/* Effet au survol du texte */
+.text-box:hover {
+    background-color: #252323; /* Changer la couleur du fond au survol */
+}
+
+
+
+
+
 /* Section Contact */
 #contact {
-    padding: 30px;
+    padding: 50px;
     background-color: #536034;
     color: #ffffff;
 }
 
 #contact h2 {
     text-align: center;
-    font-size: 1.5rem;
-    margin-bottom: 25px;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #ffffff;
 }
 
+/* Conteneur principal qui sépare la gauche et la droite */
 .contact-content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
 }
 
-.contact-info,
+/* Infos de contact à gauche */
+.contact-info {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #c7c7c7;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Mentions légales, CGV, Retours à droite */
 .contact-links {
-    padding: 10px;
-    text-align: center;
+    flex: 1;
+    padding-left: 20px;
 }
 
-.contact-info p,
 .contact-links p {
     font-size: 1rem;
     margin: 10px 0;
+    text-align: right;
 }
 
 .contact-links a {
@@ -363,44 +444,62 @@ h2 {
     text-decoration: underline;
 }
 
-/* En savoir plus */
+/* En savoir plus (en bas) */
 .en-savoir-plus {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .en-savoir-plus h3 {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
 }
 
 .en-savoir-plus p {
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin: 10px 0;
+}
+
+.en-savoir-plus a {
+    text-decoration: none;
+    color: #c7c7c7;
+}
+
+.en-savoir-plus a:hover {
+    text-decoration: underline;
 }
 
 /* Mise en forme responsive */
 @media (max-width: 768px) {
     #contact {
-        padding: 20px;
+        padding: 30px;
+    }
+
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
     }
 
     .contact-info,
     .contact-links {
-        margin-bottom: 25px;
+        flex: none;
+        margin-bottom: 30px;
     }
 
-    footer {
-        font-size: 12px;
+    .contact-links {
+        text-align: center;
     }
 }
 
+
+
+
 footer {
-    background-color: #000;
-    color: #fff;
+    background-color: #000; /* Fond noir */
+    color: #fff; /* Texte blanc */
     text-align: center;
-    padding: 15px;
-    font-size: 12px;
+    padding: 20px;
+    font-size: 14px;
     position: relative;
     bottom: 0;
     width: 100%;
