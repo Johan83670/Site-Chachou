@@ -22,3 +22,15 @@ document.addEventListener('click', function (e) {
         menu.classList.remove('active');  // Ferme le menu si on clique en dehors
     }
 });
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const produits = document.querySelectorAll(".produit");
+
+    produits.forEach((produit) => {
+        produit.addEventListener("click", () => {
+            location.reload(); // Rafraîchit la page
+        });
+    });
+});
