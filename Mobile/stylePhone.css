@@ -340,6 +340,7 @@ h2 {
     margin-top: 10px;
     font-size: 16px;
     color: #333;
+    margin-bottom: 3rem;
 }
 
 
@@ -679,6 +680,7 @@ h1, h2 {
     cursor: pointer;
     font-size: 1rem; /* Taille du texte réduite */
     transition: background-color 0.3s ease;
+    margin-bottom: 10rem;
 }
 
 #vider-panier:hover, #payer:hover {
