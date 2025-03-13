@@ -59,6 +59,39 @@ header h1 {
 }
 
 
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+#panier-lien {
+    font-size: 16px;
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+
+#panier-lien span {
+    background: rgb(202, 175, 107);
+    color: white;
+    font-size: 12px; 
+    border-radius: 50%;
+    padding: 2px 6px; 
+    margin-left: 3px; 
+}
+
+
+
 
 /* Menu latéral caché */
 #menu {
@@ -521,4 +554,121 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+
+
+
+/* Conteneur des produits */
+#produits {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Colonnes plus petites */
+    gap: 1rem; /* Réduction de l'espacement */
+    margin: 1rem;
+}
+
+.produit {
+    background-color: #fff;
+    padding: 0.8rem; /* Réduction du padding */
+    border-radius: 6px; /* Réduction du border-radius */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.produit:hover {
+    transform: scale(1.03); /* Légère réduction de l'effet */
+}
+
+.produit p {
+    font-size: 1rem; /* Texte plus petit */
+    font-weight: 500;
+}
+
+button.ajouter-panier {
+    background-color: #c9eaff;
+    color: #000000;
+    border: none;
+    padding: 0.4rem 1rem; /* Bouton plus compact */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 0.8rem;
+    transition: background-color 0.3s ease;
+}
+
+button.ajouter-panier:hover {
+    background-color: #4386af;
+}
+
+/* Panier */
+h1, h2 {
+    text-align: center;
+    font-size: 1.5rem; /* Taille réduite */
+    color: #333;
+    margin: 1.5rem 0;
+}
+
+#panier-liste {
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#panier-liste li {
+    background-color: #fff;
+    padding: 0.8rem;
+    margin: 0.8rem 0;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem; /* Texte plus petit */
+}
+
+#panier-liste li button {
+    background-color: #3ea284;
+    color: #000000;
+    border: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem; /* Bouton plus petit */
+}
+
+#panier-liste li button:hover {
+    background-color: #4386af;
+}
+
+#total {
+    font-size: 1.3rem; /* Taille ajustée */
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    display: block;
+    margin-top: 1rem;
+}
+
+#boutons-panier {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espacement réduit */
+    margin-top: 1.5rem;
+}
+
+#vider-panier, #payer {
+    background-color: #c9eaff;
+    color: #000000;
+    border: none;
+    padding: 0.8rem 1.5rem; /* Boutons plus compacts */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem; /* Taille du texte réduite */
+    transition: background-color 0.3s ease;
+}
+
+#vider-panier:hover, #payer:hover {
+    background-color: #4386af;
 }
