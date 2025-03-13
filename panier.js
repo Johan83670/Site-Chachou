@@ -30,8 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 let boutonSupprimer = document.createElement("button");
                 boutonSupprimer.textContent = "X";
                 boutonSupprimer.addEventListener("click", () => {
-                    panier.splice(index, 1);
-                    mettreAJourPanier();
+                    panier = panier.filter(p => p.id !== produit.id);
+                    afficherPanier();  
                 });
 
                 li.appendChild(boutonSupprimer);
