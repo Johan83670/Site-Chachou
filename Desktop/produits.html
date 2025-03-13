@@ -50,7 +50,8 @@
 
         <script>
             document.addEventListener("DOMContentLoaded", () => {
-                let panier = JSON.parse(localStorage.getItem("panier")) || [];
+                let userId = localStorage.getItem('user_id');
+                let panier = JSON.parse(localStorage.getItem('panier-' + userId)) || [];
                 let totalArticles = panier.reduce((acc, produit) => acc + produit.quantite, 0);
                 const nombreArticles = document.getElementById("nmb-article");
                 if (nombreArticles) {
@@ -106,6 +107,7 @@
         <p>&copy; Chachou 2025. Tous droits réservés.</p>
     </footer>
     <script src="../effet.js"></script>
+    <script src="../script.js"></script>
     <script src="../panier.js"></script>
 </body>
 </html>
