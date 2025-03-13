@@ -21,7 +21,7 @@ body {
 /* Header */
 header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 60px;
     background-color: #F6F1E9;
@@ -32,6 +32,15 @@ header {
     transition: all 0.3s ease;
     width: 100%;
 
+}
+
+/* Conteneur du titre centré */
+.header-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
 }
 
 header img {
@@ -61,7 +70,7 @@ header h1 {
 
 .header-left {
     display: flex;
-    align-items: center;
+    align-items:center;
 }
 
 
