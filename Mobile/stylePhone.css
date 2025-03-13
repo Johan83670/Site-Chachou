@@ -147,9 +147,9 @@ header h1 {
     display: block;
     cursor: pointer;
     font-size: 30px;
-    z-index: 2000; /* S'assurer que l'icône hamburger est au-dessus du menu */
+    z-index: 2000; 
     position: absolute;
-    top: 20px;
+    top: 10px; 
     left: 20px;
     background-color: transparent;
 }
