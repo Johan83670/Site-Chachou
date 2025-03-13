@@ -8,14 +8,38 @@
 </head>
 <body>
     <header>
-        <h1>ROSA <img src="chemin/vers/ton/image.jpg" alt="cigale_titre"> MARIA</h1>
-        <div class="menu-toggle">&#9776;</div> <!-- Icône hamburger -->
+        <div class="header-left">
+            <div class="menu-toggle">&#9776;</div>
+        </div>
+    
+        <div class="header-center">
+            <h1>ROSA <img src="chemin/vers/ton/image.jpg" alt="cigale_titre"> MARIA</h1>
+        </div>
+    
+        <div class="header-right">
+            <a href="panier.html" id="panier-lien">
+                🛒 <span id="nmb-article">0</span>
+            </a>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                let panier = JSON.parse(localStorage.getItem("panier")) || [];
+                let totalArticles = panier.reduce((acc, produit) => acc + produit.quantite, 0);
+                const nombreArticles = document.getElementById("nmb-article");
+                if (nombreArticles) {
+                    nombreArticles.textContent = totalArticles;
+                }
+            });
+        </script>
+    
         <nav id="menu">
             <ul>
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#favoris">Vos Favoris</a></li>
-                <li><a href="#instagram-section">Reseau</a></li>
-                <li><a href="#contact">Contactez-nous</a></li>
+                <li><a href="produitsPhone.html">Nos Prodits</a></li>
+                <li><a href="#instagram-section">Réseau</a></li>
+                <li><a href="panierPhone.html">Mon Panier</a></li>
+                <li><a href="contactPhone.html">Contactez-nous</a></li>
 
             </ul>
         </nav>
@@ -143,5 +167,6 @@
     </footer>
 
     <script src="../effet.js"></script>
+    <script src="../panier.js"></script>
 </body>
 </html>
