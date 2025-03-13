@@ -630,19 +630,24 @@ h1, h2 {
     margin-top: 1.5rem;
 }
 
-#vider-panier {
+#boutons-panier {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+    margin-top: 2rem;
+}
+
+#vider-panier, #payer {
     background-color: #c9eaff;
     color: #000000;
     border: none;
     padding: 1rem 2rem;
     border-radius: 5px;
     cursor: pointer;
-    display: block;
-    margin: 2rem auto;
     font-size: 1.2rem;
     transition: background-color 0.3s ease;
 }
 
-#vider-panier:hover {
+#vider-panier:hover, #payer:hover {
     background-color: #4386af;
 }
