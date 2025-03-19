@@ -7,15 +7,13 @@
     box-sizing: border-box;
 }
 
-
 /* Style global */
 body {
     font-family: 'Cinzel Decorative', serif;
     margin: 0;
     padding: 0;
     background-color: #ffffff;
-    max-width: 100vw; /* Limite la largeur à la largeur de l'écran */
-
+    max-width: 100vw;
 }
 
 /* Header */
@@ -31,7 +29,6 @@ header {
     font-weight: bold;
     transition: all 0.3s ease;
     width: 100%;
-
 }
 
 /* Conteneur du titre centré */
@@ -41,7 +38,7 @@ header {
     transform: translateX(-50%);
     display: flex;
     align-items: center;
-    white-space: nowrap; 
+    white-space: nowrap;
 }
 
 header img {
@@ -68,12 +65,10 @@ header h1 {
     font-family: 'Times New Roman', Times, serif;
 }
 
-
 .header-left {
     display: flex;
-    align-items:center;
+    align-items: center;
 }
-
 
 .header-right {
     display: flex;
@@ -83,7 +78,6 @@ header h1 {
     right: 15px;
 }
 
-
 #panier-lien {
     font-size: 16px;
     text-decoration: none;
@@ -92,35 +86,31 @@ header h1 {
     align-items: center;
 }
 
-
 #panier-lien span {
     background: rgb(202, 175, 107);
     color: white;
-    font-size: 12px; 
+    font-size: 12px;
     border-radius: 50%;
-    padding: 2px 6px; 
-    margin-left: 3px; 
+    padding: 2px 6px;
+    margin-left: 3px;
 }
-
-
-
 
 /* Menu latéral caché */
 #menu {
     position: fixed;
-    left: -250px; /* Caché à gauche */
+    left: -250px;
     top: 0;
     width: 200px;
     height: 100%;
-    background: #F6F1E9; /* Couleur de fond */
+    background: #F6F1E9;
     transition: left 0.3s ease-in-out;
     padding-top: 60px;
-    z-index: 1000; /* S'assurer qu'il est au-dessus des autres éléments */
+    z-index: 1000;
 }
 
 /* Menu visible lorsqu'il est activé */
 #menu.active {
-    left: 0; 
+    left: 0;
 }
 
 /* Liste des éléments du menu */
@@ -146,33 +136,29 @@ header h1 {
 .menu-toggle {
     display: block;
     cursor: pointer;
-    font-size: 30px;
-    z-index: 2000; 
+    font-size: 25px;
+    z-index: 2000;
     position: absolute;
-    top: 10px; 
+    top: 10px;
     left: 20px;
     background-color: transparent;
 }
 
-
-
-/*Accueil*/
-
+/* Accueil */
 #accueil {
     display: flex;
     align-items: center;
-    justify-content: flex-start ;
-    overflow: hidden; 
+    justify-content: flex-start;
+    overflow: hidden;
     padding: 20px;
     position: relative;
     width: 100%;
-
 }
 
 .content {
     display: flex;
     align-items: center;
-    height: 400px; 
+    height: 400px;
     justify-content: space-between;
     max-width: 1200px;
     width: 100%;
@@ -182,14 +168,13 @@ header h1 {
     flex: 0 0 40px;
     padding-right: 20px;
     position: relative;
-
 }
 
 .accueil-image {
     width: 100%;
     max-width: 100%;
     height: 600px;
-    position:initial;
+    position: initial;
 }
 
 .moving-images {
@@ -199,22 +184,22 @@ header h1 {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 
 .image-column {
     position: relative;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%; 
+    width: 50%;
 }
 
 .image1 {
     position: absolute;
-    top: 100px; 
-    left: 30%; 
+    top: 100px;
+    left: 30%;
 }
 
 .image2 {
@@ -225,22 +210,21 @@ header h1 {
 
 .image3 {
     position: absolute;
-    top: 200px; 
-    left: 50%; 
+    top: 200px;
+    left: 50%;
 }
 
 .image4 {
     position: absolute;
     top: 70px;
-    left: 60%; 
+    left: 60%;
 }
 
 .image-column img {
-    width: 100px; 
+    width: 100px;
     height: auto;
-    margin-bottom: 3px; 
+    margin-bottom: 3px;
 }
-
 
 @keyframes moveUpDown {
     0% {
@@ -266,7 +250,6 @@ header h1 {
     }
 }
 
-/* Applique l'animation à chaque image dans les colonnes */
 .image1 img {
     animation: moveUpDown 15s infinite;
 }
@@ -283,17 +266,13 @@ header h1 {
     animation: moveDownUp 19s infinite;
 }
 
-
-
 /* Bande Noir de Separation */
 .separation-line {
-    width: 100%; /* Prend toute la largeur de la page */
-    height: 30px; /* Hauteur de la bande noire */
-    background-color: #000; /* Couleur de la bande (noir) */
-    margin: 0px 0; /* Espace autour de la bande */
+    width: 100%;
+    height: 30px;
+    background-color: #000;
+    margin: 0px 0;
 }
-
-
 
 /* Styles pour la section favoris */
 #favoris {
@@ -306,7 +285,6 @@ header h1 {
     background-color: #c9eaff;
     margin-top: 0px;
     width: 100%;
-
 }
 
 h2 {
@@ -314,24 +292,23 @@ h2 {
 }
 
 .image-container-wrapper {
-    display: flex; 
+    display: flex;
     justify-content: center;
-    gap: 50px; 
+    gap: 50px;
     width: 100%;
-    flex-wrap: wrap; /* Permet aux éléments de se réorganiser sur plusieurs lignes */
+    flex-wrap: wrap;
 }
 
 .image-container {
-    width: 60%; /* Prend 45% de la largeur de l'écran, ajustable */
+    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
-
 }
 
 .image-container img {
-    max-width: 100%; /* Assure que l'image ne dépasse pas la largeur de son conteneur */
+    max-width: 100%;
     height: auto;
     border-radius: 8px;
 }
@@ -343,10 +320,9 @@ h2 {
     margin-bottom: 3rem;
 }
 
-
 .image-container:last-child img {
     width: 50px;
-    margin-top: 10px;  
+    margin-top: 10px;
 }
 
 .horizontal-lines {
@@ -357,13 +333,11 @@ h2 {
 }
 
 .line {
-    width: 400px; 
-    height: 1px; 
-    background-color: black; 
-    margin: 0 auto; 
+    width: 400px;
+    height: 1px;
+    background-color: black;
+    margin: 0 auto;
 }
-
-
 
 /* Section Instagram */
 #instagram-section {
@@ -377,11 +351,10 @@ h2 {
 .left img {
     max-width: 100%;
     height: auto;
-    width: 400px; 
+    width: 400px;
     border-radius: 15px;
 }
 
-/* Contenu droit - Bulle image et texte */
 .right {
     display: flex;
     flex-direction: column;
@@ -390,7 +363,6 @@ h2 {
     margin-left: 20px;
 }
 
-/* Bulle Image Instagram */
 .bubble {
     width: 100px;
     height: 100px;
@@ -399,13 +371,13 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0; 
+    background-color: #f0f0f0;
     transition: transform 0.3s ease;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
 .bubble:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
 
 .bubble img {
@@ -414,7 +386,6 @@ h2 {
     object-fit: cover;
 }
 
-/* Texte Suivez-nous */
 .text-box {
     background-color: #000000;
     padding: 15px 25px;
@@ -431,18 +402,13 @@ h2 {
 }
 
 a {
-    text-decoration: none; 
+    text-decoration: none;
     color: #ffffff;
 }
 
-/* Effet au survol du texte */
 .text-box:hover {
     background-color: #252323;
 }
-
-
-
-
 
 /* Section Contact */
 #contact {
@@ -450,7 +416,6 @@ a {
     background-color: #536034;
     color: #ffffff;
     width: 100%;
-
 }
 
 #contact h2 {
@@ -460,14 +425,12 @@ a {
     color: #ffffff;
 }
 
-/* Conteneur principal qui sépare la gauche et la droite */
 .contact-content {
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
 }
 
-/* Infos de contact à gauche */
 .contact-info {
     flex: 1;
     padding-right: 20px;
@@ -488,7 +451,6 @@ a {
     text-decoration: underline;
 }
 
-/* Mentions légales, CGV, Retours à droite */
 .contact-links {
     flex: 1;
     padding-left: 20px;
@@ -509,7 +471,6 @@ a {
     text-decoration: underline;
 }
 
-/* En savoir plus (en bas) */
 .en-savoir-plus {
     text-align: center;
     margin-top: 40px;
@@ -534,7 +495,6 @@ a {
     text-decoration: underline;
 }
 
-/* Mise en forme responsive */
 @media (max-width: 768px) {
     #contact {
         padding: 30px;
@@ -556,8 +516,6 @@ a {
     }
 }
 
-
-
 footer {
     background-color: #000;
     color: #fff;
@@ -569,32 +527,29 @@ footer {
     width: 100%;
 }
 
-
-
-
 /* Conteneur des produits */
 #produits {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Colonnes plus petites */
-    gap: 1rem; /* Réduction de l'espacement */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
     margin: 1rem;
 }
 
 .produit {
     background-color: #fff;
-    padding: 0.8rem; /* Réduction du padding */
-    border-radius: 6px; /* Réduction du border-radius */
+    padding: 0.8rem;
+    border-radius: 6px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease;
 }
 
 .produit:hover {
-    transform: scale(1.03); /* Légère réduction de l'effet */
+    transform: scale(1.03);
 }
 
 .produit p {
-    font-size: 1rem; /* Texte plus petit */
+    font-size: 1rem;
     font-weight: 500;
 }
 
@@ -602,7 +557,7 @@ button.ajouter-panier {
     background-color: #c9eaff;
     color: #000000;
     border: none;
-    padding: 0.4rem 1rem; /* Bouton plus compact */
+    padding: 0.4rem 1rem;
     border-radius: 5px;
     cursor: pointer;
     font-size: 0.9rem;
@@ -617,7 +572,7 @@ button.ajouter-panier:hover {
 /* Panier */
 h1, h2 {
     text-align: center;
-    font-size: 1.5rem; /* Taille réduite */
+    font-size: 1.5rem;
     color: #333;
     margin: 1.5rem 0;
 }
@@ -638,7 +593,7 @@ h1, h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 0.9rem; /* Texte plus petit */
+    font-size: 0.9rem;
 }
 
 #panier-liste li button {
@@ -648,7 +603,7 @@ h1, h2 {
     padding: 0.3rem 0.6rem;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 0.8rem; /* Bouton plus petit */
+    font-size: 0.8rem;
 }
 
 #panier-liste li button:hover {
@@ -656,7 +611,7 @@ h1, h2 {
 }
 
 #total {
-    font-size: 1.3rem; /* Taille ajustée */
+    font-size: 1.3rem;
     font-weight: 700;
     color: #333;
     text-align: center;
@@ -667,7 +622,7 @@ h1, h2 {
 #boutons-panier {
     display: flex;
     justify-content: center;
-    gap: 10px; /* Espacement réduit */
+    gap: 10px;
     margin-top: 1.5rem;
 }
 
@@ -675,10 +630,10 @@ h1, h2 {
     background-color: #c9eaff;
     color: #000000;
     border: none;
-    padding: 0.8rem 1.5rem; /* Boutons plus compacts */
+    padding: 0.8rem 1.5rem;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1rem; /* Taille du texte réduite */
+    font-size: 1rem;
     transition: background-color 0.3s ease;
     margin-bottom: 10rem;
 }
@@ -686,11 +641,6 @@ h1, h2 {
 #vider-panier:hover, #payer:hover {
     background-color: #4386af;
 }
-
-
-
-
-
 
 /* Section contact */
 .contact {

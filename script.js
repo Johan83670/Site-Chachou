@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Gestion de l'ID utilisateur
     function getUserId() {
         if (!localStorage.getItem('user_id')) {
             const userId = 'user-' + Math.random().toString(36).substr(2, 9);
@@ -9,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const userId = getUserId();
 
-    // Function to display user ID in the footer
+    // Affichage de l'ID utilisateur dans le footer
     function afficherUserId() {
         const footer = document.querySelector("footer");
         if (footer) {
@@ -23,6 +24,5 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Call the function to display user ID
     afficherUserId();
 });
